@@ -6,8 +6,7 @@ target 'instragram' do
   use_frameworks!
 
   # Pods for instragram
-
-    pod 'Parse'
+  pod 'Parse'
 
   target 'instragramTests' do
     inherit! :search_paths
