@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     
     @IBOutlet weak var usernameField: UITextField!
@@ -20,7 +20,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.usernameField.delegate = self
+        self.passwordField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -67,7 +68,16 @@ class LoginViewController: UIViewController {
      
     }//onSignUp
     
+    // hide keyboard when user touches outside keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        usernameField.resignFirstResponder()
+        passwordField.resignFirstResponder()
+        return (true)
+    }
     
     /*
     // MARK: - Navigation

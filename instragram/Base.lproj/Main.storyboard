@@ -93,38 +93,66 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAI-3w-aPf">
-                                <rect key="frame" x="160" y="219" width="54" height="30"/>
+                                <rect key="frame" x="62" y="468" width="117" height="103"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Camera"/>
+                                <state key="normal" title="Camera">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="onCameraPress:" destination="3io-jx-9IB" eventType="touchUpInside" id="OZu-AC-nod"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bc4-PV-00M">
-                                <rect key="frame" x="163" y="485" width="48" height="30"/>
+                                <rect key="frame" x="187" y="485" width="118" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Library"/>
+                                <state key="normal" title="Library">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="onLibraryPress:" destination="3io-jx-9IB" eventType="touchUpInside" id="tRc-sX-Orv"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pictureAlbumIcon" translatesAutoresizingMaskIntoConstraints="NO" id="nIC-ZP-rfp">
-                                <rect key="frame" x="81" y="349" width="240" height="128"/>
+                                <rect key="frame" x="207" y="484" width="116" height="87"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="colorCameraIcon" translatesAutoresizingMaskIntoConstraints="NO" id="KM0-bn-79C">
-                                <rect key="frame" x="67" y="83" width="240" height="128"/>
+                                <rect key="frame" x="50" y="482" width="124" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imagePlaceHolder.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="tsx-f2-360">
+                                <rect key="frame" x="67" y="40" width="240" height="189"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52b-3l-P6J">
+                                <rect key="frame" x="140" y="405" width="95" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <state key="normal" title="Post"/>
+                                <connections>
+                                    <action selector="onPostButtonPressed:" destination="3io-jx-9IB" eventType="touchUpInside" id="IJ4-1H-1oK"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="(enter comment)" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6oY-Eg-wP3">
+                                <rect key="frame" x="67" y="269" width="240" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="gPT-t1-MAt"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Capture" image="camera.png" id="v8A-dr-Zmz"/>
+                    <connections>
+                        <outlet property="captionToPost" destination="6oY-Eg-wP3" id="MMz-Op-s9e"/>
+                        <outlet property="imageToPost" destination="tsx-f2-360" id="rbU-fJ-UxI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sLW-qF-1AA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2086" y="406"/>
+            <point key="canvasLocation" x="2085.5999999999999" y="405.24737631184411"/>
         </scene>
         <!--Home-->
         <scene sceneID="tut-XO-J2M">
@@ -146,11 +174,53 @@
                                 <rect key="frame" x="123" y="20" width="129" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GjD-hi-06B">
+                                <rect key="frame" x="0.0" y="60" width="375" height="558"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="325" id="Le3-sL-85T" customClass="PostCell" customModule="instragram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="325"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Le3-sL-85T" id="MXj-Aj-yPO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="324.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uyv-HR-h7D" customClass="PFImageView">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="288"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fy-TV-KTo">
+                                                    <rect key="frame" x="8" y="296" width="359" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="4fy-TV-KTo" secondAttribute="bottom" constant="8" id="5yf-RM-hHm"/>
+                                                <constraint firstItem="Uyv-HR-h7D" firstAttribute="top" secondItem="MXj-Aj-yPO" secondAttribute="top" id="MUT-I6-o4v"/>
+                                                <constraint firstItem="4fy-TV-KTo" firstAttribute="leading" secondItem="MXj-Aj-yPO" secondAttribute="leading" constant="8" id="NPj-CT-3c1"/>
+                                                <constraint firstAttribute="trailing" secondItem="4fy-TV-KTo" secondAttribute="trailing" constant="8" id="SVB-Zd-aTh"/>
+                                                <constraint firstAttribute="trailing" secondItem="Uyv-HR-h7D" secondAttribute="trailing" id="WqS-m1-uOK"/>
+                                                <constraint firstItem="Uyv-HR-h7D" firstAttribute="leading" secondItem="MXj-Aj-yPO" secondAttribute="leading" id="sTx-ZZ-TMm"/>
+                                                <constraint firstItem="4fy-TV-KTo" firstAttribute="top" secondItem="Uyv-HR-h7D" secondAttribute="bottom" constant="8" id="yBl-0K-knf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="postCaptionLabel" destination="4fy-TV-KTo" id="TRm-lH-dyw"/>
+                                            <outlet property="postImageView" destination="Uyv-HR-h7D" id="iFh-Qc-85k"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="y2s-zx-ecc"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="home.png" id="9UY-oW-4f1"/>
+                    <connections>
+                        <outlet property="postsTableView" destination="GjD-hi-06B" id="6As-UZ-Yqf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MIU-aq-eaz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -180,6 +250,7 @@
         <image name="camera.png" width="30" height="30"/>
         <image name="colorCameraIcon" width="512" height="512"/>
         <image name="home.png" width="30" height="30"/>
+        <image name="imagePlaceHolder.jpg" width="300" height="300"/>
         <image name="newNavImage.png" width="303" height="75"/>
         <image name="pictureAlbumIcon" width="512" height="512"/>
     </resources>
