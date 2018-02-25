@@ -12,6 +12,7 @@
 		544F0722203FA9A7004137B7 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 544F0721203FA9A7004137B7 /* home.png */; };
 		544F0724203FA9CE004137B7 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 544F0723203FA9CE004137B7 /* camera.png */; };
 		544F0726203FAB06004137B7 /* PhotoMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544F0725203FAB06004137B7 /* PhotoMapViewController.swift */; };
+		545540BD204249BD00B75D9F /* PostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545540BC204249BD00B75D9F /* PostDetailsViewController.swift */; };
 		546E25E02041105B00B9FA39 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546E25DF2041105B00B9FA39 /* PostCell.swift */; };
 		54700BD32040F92500EB2934 /* imagePlaceHolder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54700BD22040F92400EB2934 /* imagePlaceHolder.jpg */; };
 		5490176C203E627F00837770 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5490176B203E627F00837770 /* LoginViewController.swift */; };
@@ -56,6 +57,7 @@
 		544F0721203FA9A7004137B7 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		544F0723203FA9CE004137B7 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
 		544F0725203FAB06004137B7 /* PhotoMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMapViewController.swift; sourceTree = "<group>"; };
+		545540BC204249BD00B75D9F /* PostDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsViewController.swift; sourceTree = "<group>"; };
 		546E25DF2041105B00B9FA39 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		54700BD22040F92400EB2934 /* imagePlaceHolder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = imagePlaceHolder.jpg; sourceTree = SOURCE_ROOT; };
 		5490176B203E627F00837770 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				5490176B203E627F00837770 /* LoginViewController.swift */,
 				54BF8ECA203EB5EE005AD064 /* homePageViewController.swift */,
 				544F0725203FAB06004137B7 /* PhotoMapViewController.swift */,
+				545540BC204249BD00B75D9F /* PostDetailsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -544,6 +547,7 @@
 			files = (
 				544F0726203FAB06004137B7 /* PhotoMapViewController.swift in Sources */,
 				54BF8ECB203EB5EE005AD064 /* homePageViewController.swift in Sources */,
+				545540BD204249BD00B75D9F /* PostDetailsViewController.swift in Sources */,
 				5490176C203E627F00837770 /* LoginViewController.swift in Sources */,
 				54B5FA9A203E5F2400EA0D3D /* AppDelegate.swift in Sources */,
 				54B49687203FF3710030262C /* Post.swift in Sources */,

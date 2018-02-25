@@ -89,6 +89,29 @@ class homePageViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as! PostCell
+        
+        if let indexPath = postsTableView.indexPath(for: cell){
+            
+            let postIndexPath = posts[indexPath.row]
+            let detailViewController = segue.destination as! PostDetailsViewController
+            
+            detailViewController.postImageFile = postIndexPath.media
+            detailViewController.captionString = postIndexPath.caption
+            
+            // retrieve date post was created
+            let df = DateFormatter()
+            df.dateStyle = .short
+            df.timeStyle = .short
+            df.locale = Locale.current
+            
+            
+            detailViewController.timeStampString = df.string(from: self.posts[(indexPath.section)].createdAt!)
+        }
+    }
+    
+    
     
     /*
     // MARK: - Navigation
